@@ -1,15 +1,15 @@
 # segkit
 
 <!-- ALL-CONTRIBUTORS-BADGE:START --><!-- ALL-CONTRIBUTORS-BADGE:END -->
-[![npm version](https://img.shields.io/npm/v/segkit.svg)](https://www.npmjs.com/package/segkit)
-[![npm downloads](https://img.shields.io/npm/dm/segkit.svg)](https://www.npmjs.com/package/segkit)
+[![npm version](https://img.shields.io/npm/v/@billdaddy/segkit.svg)](https://www.npmjs.com/package/@billdaddy/segkit)
+[![npm downloads](https://img.shields.io/npm/dm/@billdaddy/segkit.svg)](https://www.npmjs.com/package/@billdaddy/segkit)
 [![CI](https://img.shields.io/github/actions/workflow/status/trananhtung/segkit/ci.yml?branch=main)](https://github.com/trananhtung/segkit/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Zero-dependency Segment Tree and Fenwick Tree (BIT) — TypeScript-first range query data structures for npm. The only package in this category was last published in 2013.**
 
 ```ts
-import { RangeSumTree, RangeMinTree, FenwickTree } from "segkit";
+import { RangeSumTree, RangeMinTree, FenwickTree } from "@billdaddy/segkit";
 
 // Range sum queries with O(log n) updates
 const tree = new RangeSumTree([1, 3, 5, 7, 9, 11]);
@@ -43,7 +43,7 @@ The only npm package for segment trees (`segment-tree`) was last published on **
 ## Install
 
 ```bash
-npm install segkit
+npm install @billdaddy/segkit
 ```
 
 ## Usage
@@ -53,7 +53,7 @@ npm install segkit
 The `SegmentTree<T>` class accepts any **associative binary operation with an identity element** (a monoid). This makes it work for sum, min, max, GCD, product, string concatenation, bitwise AND/OR, and more:
 
 ```ts
-import { SegmentTree } from "segkit";
+import { SegmentTree } from "@billdaddy/segkit";
 
 // Range sum (same as RangeSumTree)
 const sumTree = new SegmentTree([1, 2, 3, 4, 5], (a, b) => a + b, 0);
@@ -79,7 +79,7 @@ strTree.query(0, 2); // "aXc"
 ### Built-in Specializations
 
 ```ts
-import { RangeSumTree, RangeMinTree, RangeMaxTree, RangeGcdTree } from "segkit";
+import { RangeSumTree, RangeMinTree, RangeMaxTree, RangeGcdTree } from "@billdaddy/segkit";
 
 const data = [3, 1, 4, 1, 5, 9, 2, 6];
 
@@ -110,7 +110,7 @@ maxTree.query(0, 7); // 100
 The Fenwick Tree is more memory-efficient than a Segment Tree for prefix-sum queries only. Use it when you need fast prefix sums with point updates:
 
 ```ts
-import { FenwickTree } from "segkit";
+import { FenwickTree } from "@billdaddy/segkit";
 
 // Build from array in O(n) using the difference-propagation technique
 const bit = new FenwickTree([1, 2, 3, 4, 5]);
@@ -149,7 +149,7 @@ empty.get(3); // 42
 For matrix range sum queries:
 
 ```ts
-import { FenwickTree2D } from "segkit";
+import { FenwickTree2D } from "@billdaddy/segkit";
 
 const matrix = new FenwickTree2D(4, 4);
 

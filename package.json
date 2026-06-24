@@ -1,5 +1,5 @@
 {
-  "name": "segkit",
+  "name": "@billdaddy/segkit",
   "version": "0.1.0",
   "description": "Zero-dependency segment tree and Fenwick tree (BIT) for range queries and prefix sums — TypeScript-first npm equivalent of Python sortedcontainers range structures and Java segment trees.",
   "keywords": [
@@ -14,8 +14,13 @@
     "algorithm"
   ],
   "homepage": "https://github.com/trananhtung/segkit#readme",
-  "bugs": { "url": "https://github.com/trananhtung/segkit/issues" },
-  "repository": { "type": "git", "url": "git+https://github.com/trananhtung/segkit.git" },
+  "bugs": {
+    "url": "https://github.com/trananhtung/segkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trananhtung/segkit.git"
+  },
   "license": "MIT",
   "author": "trananhtung",
   "type": "module",
@@ -29,7 +34,11 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
